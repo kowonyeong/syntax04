@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//난수 추출된 수의 소수 판정 프로그램 v0.4
+//난수 추출된 수의 소수 판정 프로그램 v0.5
 func main() {
 	seed := time.Now().Unix()
 	rand.Seed(seed)
@@ -20,8 +20,9 @@ func main() {
 		if (number % i) == 0 {
 			check = false
 		}
+		fmt.Print(i, " ")
 	}
-	if check == true {
+	if check { // 비교 연산자 제거
 		fmt.Print(number, "는(은) 소수입니다!")
 	} else {
 		fmt.Print(number, "는(은) 소수가 아닙니다!")
