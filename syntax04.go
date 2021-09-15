@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//난수 추출된 수의 소수 판정 프로그램 v0.3
+//난수 추출된 수의 소수 판정 프로그램 v0.4
 func main() {
 	seed := time.Now().Unix()
 	rand.Seed(seed)
